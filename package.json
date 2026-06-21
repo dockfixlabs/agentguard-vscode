@@ -1,0 +1,103 @@
+{
+  "name": "agentguard",
+  "displayName": "AgentGuard — AI Agent Security Scanner",
+  "description": "Scan your AI agent code for OWASP ASI Top 10 vulnerabilities directly in VS Code.",
+  "version": "0.1.0",
+  "publisher": "dockfixlabs",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dockfixlabs/agentguard-vscode"
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Security", "Linters", "Other"],
+  "keywords": ["ai-security", "agent-security", "owasp-asi", "prompt-injection", "mcp", "llm-security"],
+  "icon": "media/icon.png",
+  "activationEvents": [
+    "onCommand:agentguard.scan",
+    "onCommand:agentguard.scanWorkspace",
+    "onLanguage:python",
+    "onLanguage:javascript",
+    "onLanguage:typescript"
+  ],
+  "main": "./src/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "agentguard.scan",
+        "title": "AgentGuard: Scan Current File",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "agentguard.scanWorkspace",
+        "title": "AgentGuard: Scan Workspace",
+        "icon": "$(shield)"
+      },
+      {
+        "command": "agentguard.showRules",
+        "title": "AgentGuard: Show Detection Rules",
+        "icon": "$(list-unordered)"
+      }
+    ],
+    "configuration": {
+      "title": "AgentGuard",
+      "properties": {
+        "agentguard.minSeverity": {
+          "type": "string",
+          "enum": ["CRITICAL", "HIGH", "MEDIUM", "LOW", "INFO"],
+          "default": "MEDIUM",
+          "description": "Minimum severity to report"
+        },
+        "agentguard.scanOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically scan file on save"
+        },
+        "agentguard.pythonPath": {
+          "type": "string",
+          "default": "python",
+          "description": "Path to Python executable (must have dfx-agentguard installed)"
+        }
+      }
+    },
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "agentguard",
+          "title": "AgentGuard",
+          "icon": "$(shield)"
+        }
+      ]
+    },
+    "views": {
+      "agentguard": [
+        {
+          "id": "agentguard.findings",
+          "name": "Findings"
+        }
+      ]
+    },
+    "menus": {
+      "editor/context": [
+        {
+          "command": "agentguard.scan",
+          "when": "editorTextFocus",
+          "group": "agentguard@1"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "package": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.80.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  }
+}
