@@ -14,5 +14,12 @@ jobs:
     - uses: actions/setup-node@v4
       with:
         node-version: '20'
+<<<<<<< HEAD
+    - name: Validate package.json
+      run: node -e "require('./package.json')"
+    - name: Check extension.js exists
+      run: test -f src/extension.js
+=======
     - run: npm install
     - run: npm run compile
+>>>>>>> a57697e26bc7063fa8fd66082279411f69978078
