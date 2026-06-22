@@ -3,6 +3,24 @@
 > **Scan AI agent code for security vulnerabilities directly in VS Code.** Inline diagnostics for OWASP ASI Top 10 vulnerabilities.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![CI](https://img.shields.io/badge/CI-GitHub%20Actions-2088FF?style=flat-square&logo=github-actions&logoColor=white)](https://github.com/dockfixlabs/agentguard-vscode/actions)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue?style=flat-square)](https://github.com/dockfixlabs/agentguard-vscode/releases)
+
+## Install
+
+### Option 1: Download VSIX (Recommended)
+1. Download `agentguard-0.1.0.vsix` from [Releases](https://github.com/dockfixlabs/agentguard-vscode/releases)
+2. In VS Code: Extensions → ⋯ menu → "Install from VSIX..."
+3. Select the downloaded file
+
+### Option 2: From source
+```bash
+git clone https://github.com/dockfixlabs/agentguard-vscode
+cd agentguard-vscode
+npm install
+npx vsce package
+# Install the generated .vsix file in VS Code
+```
 
 ## Features
 
