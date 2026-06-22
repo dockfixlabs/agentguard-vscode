@@ -17,3 +17,7 @@ htmlcov/
 *.so
 .DS_Store
 Thumbs.db
+node_modules/
+out/
+*.vsix
+package-lock.json
