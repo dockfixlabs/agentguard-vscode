@@ -1,4 +1,4 @@
-# AgentGuard - VS Code Extension
+﻿# AgentGuard - VS Code Extension
 
 > **Scan AI agent code for security vulnerabilities directly in VS Code.** Inline diagnostics for OWASP ASI Top 10 vulnerabilities.
 
@@ -10,7 +10,7 @@
 
 ### Option 1: Download VSIX (Recommended)
 1. Download `agentguard-0.1.0.vsix` from [Releases](https://github.com/dockfixlabs/agentguard-vscode/releases)
-2. In VS Code: Extensions ->  menu -> "Install from VSIX..."
+2. In VS Code: Extensions -> menu -> "Install from VSIX..."
 3. Select the downloaded file
 
 ### Option 2: From source
@@ -24,13 +24,13 @@ npx vsce package
 
 ## Features
 
--  **Scan current file** - Right-click -> "AgentGuard: Scan Current File"
--  **Scan entire workspace** - Command palette -> "AgentGuard: Scan Workspace"
--  **Inline diagnostics** - Findings appear as squiggly underlines in your editor
--  **Findings tree view** - All findings in the AgentGuard sidebar panel
--  **Scan on save** - Optional automatic scanning on file save
--  **10 OWASP ASI rules** - Prompt injection, tool abuse, data exfiltration, and more
--  **Severity colors** - Critical (red), High (orange), Medium (yellow), Low (blue)
+- **Scan current file** - Right-click -> "AgentGuard: Scan Current File"
+- **Scan entire workspace** - Command palette -> "AgentGuard: Scan Workspace"
+- **Inline diagnostics** - Findings appear as squiggly underlines in your editor
+- **Findings tree view** - All findings in the AgentGuard sidebar panel
+- **Scan on save** - Optional automatic scanning on file save
+- **10 OWASP ASI rules** - Prompt injection, tool abuse, data exfiltration, and more
+- **Severity colors** - Critical (red), High (orange), Medium (yellow), Low (blue)
 
 ## Requirements
 
