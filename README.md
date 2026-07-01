@@ -1,4 +1,4 @@
-﻿# AgentGuard - VS Code Extension
+# AgentGuard - VS Code Extension
 
 > **Scan AI agent code for security vulnerabilities directly in VS Code.** Inline diagnostics for OWASP ASI Top 10 vulnerabilities.
 
